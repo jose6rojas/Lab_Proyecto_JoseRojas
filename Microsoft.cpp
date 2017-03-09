@@ -6,7 +6,7 @@
 Microsoft::Microsoft()
 {
 }
-Microsoft::Microsoft(string, string, bool, string, double) : Consola(year, modelo, estado, numSerie, precio)
+Microsoft::Microsoft(string year, string modelo, bool estado, string numSerie, double precio) : Consola(year, modelo, estado, numSerie, precio)
 {
 }
 
