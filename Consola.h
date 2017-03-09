@@ -1,4 +1,3 @@
-// martes, 7 de marzo de 2017
 // Consola.h
 
 #include <string>
@@ -10,34 +9,28 @@ using namespace std;
 
 class Consola
 {
+	// Atributos
 	protected:
 		string year;
 		string modelo;
-		string estado;
+		bool estado;
 		string numSerie;
 		double precio;
 	public:
 		// Constructores
 		Consola();
-		Consola(string, string, string, string, double);
+		Consola(string, string, bool, string, double);
 		
 		// Setters y Getters
 		// year
 		void setYear(string);
 		string getYear();
-		
-		// modelo
-		void setModelo(int);
-		string getModelo();
-		
 		// estado
-		void setEstado(int);
+		void setEstado(bool); // Le da las opciones al usuario en el main.
 		string getEstado();
-		
 		// numSerie
-		void setNumSerie(string);
+		void setNumSerie(string); // Se valida que sea unico en el main.
 		string getNumSerie();
-		
 		// precio
 		void setPrecio(double);
 		double getPrecio();

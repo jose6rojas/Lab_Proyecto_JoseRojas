@@ -1,4 +1,3 @@
-// martes, 7 de marzo de 2017
 // Consola.cpp
 
 #include "Consola.h"
@@ -6,13 +5,8 @@
 // Constructores
 Consola::Consola()
 {
-	year = "";
-	modelo = "";
-	estado = "";
-	numSerie = "";
-	precio = 0.0;
 }
-Consola::Consola(string year, string modelo, string estado, string numSerie, double precio)
+Consola::Consola(string year, string modelo, bool estado, string numSerie, double precio)
 {
 	this -> year = year;
 	this -> modelo = modelo;
@@ -21,8 +15,9 @@ Consola::Consola(string year, string modelo, string estado, string numSerie, dou
 	this -> precio = precio;
 }
 
+// Setters y Getters
 // year
-void Consola::setYear(string)
+void Consola::setYear(string year)
 {
 	this -> year = year;
 }
@@ -30,44 +25,27 @@ string Consola::getYear()
 {
 	return year;
 }
-
-// modelo
-void Consola::setModelo(int op)
-{
-	modelo = "";
-}
-string Consola::getModelo()
-{
-	return modelo;
-}
-
 // estado
-void Consola::setEstado(int op)
+void Consola::setEstado(bool estado)
 {
-	if(op == 1)
-		estado = "Nuevo";
-	else if(op == 2)
-		estado = "Semi-Nuevo";
-	else if(op == 3)
-		estado = "Usado";
-	else
-		estado = "Usado";
+	this -> estado = estado;	
 }
 string Consola::getEstado()
 {
-	return estado;
+	if(estado)
+		return "Nuevo";
+	else
+		return "Usado";
 }
-
 // numSerie
 void Consola::setNumSerie(string numSerie)
 {
-	numSerie = "";
+	this -> numSerie = numSerie;
 }
 string Consola::getNumSerie()
 {
 	return numSerie;
 }
-
 // precio
 void Consola::setPrecio(double precio)
 {
