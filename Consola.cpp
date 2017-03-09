@@ -6,9 +6,9 @@
 Consola::Consola()
 {
 }
-Consola::Consola(string year, string modelo, bool estado, string numSerie, double precio)
+Consola::Consola(string modelo, bool estado, string numSerie, double precio)
 {
-	this -> year = year;
+	// this -> year = year;
 	this -> modelo = modelo;
 	this -> estado = estado;
 	this -> numSerie = numSerie;
@@ -17,10 +17,10 @@ Consola::Consola(string year, string modelo, bool estado, string numSerie, doubl
 
 // Setters y Getters
 // year
-void Consola::setYear(string year)
+/* void Consola::setYear(string year)
 {
 	this -> year = year;
-}
+} */
 string Consola::getYear()
 {
 	return year;

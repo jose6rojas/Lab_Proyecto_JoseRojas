@@ -10,10 +10,10 @@ class Microsoft : public Consola
 	public:
 		// Constructores
 		Microsoft();
-		Microsoft(string, string, bool, string, double); // year, modelo, estado, numSerie, precio
+		Microsoft(string, bool, string, double); // modelo, estado, numSerie, precio
 		
 		// Setters y Getters de la clase padre
-		virtual void setYear(string);
+		// virtual void setYear(string);
 		virtual string getYear();
 		virtual void setEstado(bool);
 		virtual string getEstado();

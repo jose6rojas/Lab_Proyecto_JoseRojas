@@ -9,9 +9,9 @@ class Nintendo : public Consola
 {
 	public:
 		Nintendo();
-		Nintendo(string, string, bool, string, double); // year, modelo, estado, numSerie, precio
+		Nintendo(string, bool, string, double); // modelo, estado, numSerie, precio
 		
-		virtual void setYear(string);
+		// virtual void setYear(string);
                 virtual string getYear();
                 virtual void setEstado(bool);
                 virtual string getEstado();

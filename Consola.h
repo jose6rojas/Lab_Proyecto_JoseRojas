@@ -19,11 +19,11 @@ class Consola
 	public:
 		// Constructores
 		Consola();
-		Consola(string, string, bool, string, double);
+		Consola(string, bool, string, double); // Todos los atributos menos year.
 		
 		// Setters y Getters
 		// year
-		void setYear(string);
+		// void setYear(string);
 		string getYear();
 		// estado
 		void setEstado(bool); // Le da las opciones al usuario en el main.
