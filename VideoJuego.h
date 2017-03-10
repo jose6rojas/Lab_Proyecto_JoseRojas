@@ -21,7 +21,7 @@ class VideoJuego
 		double precio;
 	public:
 		VideoJuego();
-		VideoJuego(string, string,  Consola*, int, string, bool, string, double);
+		VideoJuego(string, string, Consola*, int, string, bool, string, double);
 		// nombre, year, Consola*, numJugadores, genero, estado, numSerie, precio
 		
 		// nombre
