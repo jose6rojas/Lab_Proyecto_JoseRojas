@@ -37,13 +37,13 @@ class VideoJuego
 		void setNumJugadores(int);
 		int getNumJugadores();
 		// genero
-		void setGenero(string);
+		void setGenero(int);
 		string getGenero();
 		// estado
 		void setEstado(bool);
 		string getEstado();
 		// numSerie
-		void setNumSerie();
+		void setNumSerie(string);
 		string getNumSerie();
 		// precio
 		void setPrecio(double);
