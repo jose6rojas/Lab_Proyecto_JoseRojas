@@ -14,13 +14,13 @@ class Microsoft : public Consola
 		
 		// Setters y Getters de la clase padre
 		// virtual void setYear(string);
-		virtual string getYear();
+		/* virtual string getYear();
 		virtual void setEstado(bool);
 		virtual string getEstado();
 		virtual void setNumSerie(string);
 		virtual string getNumSerie();
 		virtual void setPrecio(double);
-		virtual double getPrecio();
+		virtual double getPrecio(); */
 		
 		// Setter y Getter para modelo
 		void setModelo(int);

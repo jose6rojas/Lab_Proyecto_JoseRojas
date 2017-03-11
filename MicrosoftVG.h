@@ -13,7 +13,7 @@ class MicrosoftVG : public VideoJuego
 		// nombre, year, Consola*, numJugadores, genero, estado, numSerie, precio
 		
 		// nombre
-		virtual void setNombre(string);
+		/* virtual void setNombre(string);
 		virtual string getNombre();
 		// year
 		virtual void setYear(string);
@@ -35,7 +35,7 @@ class MicrosoftVG : public VideoJuego
 		virtual string getNumSerie();
 		// precio
 		virtual void setPrecio(double);
-		virtual double getPrecio();
+		virtual double getPrecio(); */
 		
 		// ~MicrosoftVG();
 };

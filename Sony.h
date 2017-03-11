@@ -12,13 +12,13 @@ class Sony : public Consola
 		Sony(string, bool, string, double); // modelo, estado, numSerie, precio
 		
 		// virtual void setYear(string);
-                virtual string getYear();
+                /* virtual string getYear();
                 virtual void setEstado(bool);
                 virtual string getEstado();
                 virtual void setNumSerie(string);
                 virtual string getNumSerie();
                 virtual void setPrecio(double);
-                virtual double getPrecio();
+                virtual double getPrecio(); */
 		
 		void setModelo(int);
 		string getModelo();

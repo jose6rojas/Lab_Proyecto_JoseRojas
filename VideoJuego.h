@@ -1,9 +1,9 @@
 // VideoJuego.h
 
-#include <string>
+// #include <string>
 #include "Consola.h"
 
-using namespace std;
+// using namespace std;
 
 #ifndef VIDEOJUEGO_H
 #define VIDEOJUEGO_H
