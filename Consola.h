@@ -23,8 +23,11 @@ class Consola
 		
 		// Setters y Getters
 		// year
-		// void setYear(string);
+		void setYear(string);
 		string getYear();
+		// modelo
+		// void setModelo(string);
+		string getModelo();
 		// estado
 		void setEstado(bool); // Le da las opciones al usuario en el main.
 		string getEstado();

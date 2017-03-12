@@ -1,0 +1,1 @@
+g++ Proyecto_JoseRojas.cpp Consola.cpp Microsoft.cpp Sony.cpp Nintendo.cpp VideoJuego.cpp MicrosoftVG.cpp SonyVG.cpp NintendoVG.cpp Bandai.cpp Konami.cpp SquareEnix.cpp ElectronicArts.cpp SEGA.cpp Ubisoft.cpp Usuario.cpp Administrador.cpp Vendedor.cpp Venta.cpp Inventario.cpp -o proyecto

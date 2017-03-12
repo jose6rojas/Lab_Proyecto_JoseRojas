@@ -17,13 +17,22 @@ Consola::Consola(string modelo, bool estado, string numSerie, double precio)
 
 // Setters y Getters
 // year
-/* void Consola::setYear(string year)
+void Consola::setYear(string year)
 {
 	this -> year = year;
-} */
+}
 string Consola::getYear()
 {
 	return year;
+}
+// modelo
+/* void Consola::setModelo(string modelo)
+{
+	this -> modelo = modelo;
+} */
+string Consola::getModelo()
+{
+	return modelo;
 }
 // estado
 void Consola::setEstado(bool estado)

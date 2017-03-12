@@ -21,7 +21,9 @@ class Sony : public Consola
                 virtual double getPrecio(); */
 		
 		void setModelo(int);
+		void setModelo(string);
 		string getModelo();
+		int getModelo(string);
 };
 
 #endif
