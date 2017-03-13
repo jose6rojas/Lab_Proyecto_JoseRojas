@@ -268,7 +268,7 @@ int main()
 						/* else
 							cout << "Debe escoger una opcion valida." << endl; */
 					}
-        				for(int i; i < consoles.size(); i++)
+        				for(int i = 0; i < consoles.size(); i++)
                 				delete consoles[i];
         				consoles.clear();
 				}
@@ -324,14 +324,14 @@ int main()
 					cout << "Debe escoger una opcion valida." << endl; */
 			}
 		}
-		
+	delete admin;	
 	}
 	else if(op_inicial == 2) // Vendedor
 	{	
-		/* Vendedor* V = new Vendedor();
+		Vendedor* V = new Vendedor();
 		
 		string nombre;
-		cout << "Ingrese su nombre: ";
+		cout << "\nIngrese su nombre: ";
 		cin >> nombre;
 		
 		string horaEntrada;
@@ -348,7 +348,7 @@ int main()
 		V -> setHoraEntrada(horaEntrada);
 		
 		int op_vdor;
-		cout << "¿Que desea hacer el dia de hoy?" << endl;
+		cout << "\n¿Que desea hacer el dia de hoy?" << endl;
 		cout << "1. Agregar al Inventario" << endl;
 		cout << "2. Vender" << endl;
 		cout << "3. Salir" << endl;
@@ -357,30 +357,115 @@ int main()
 		
 		if(op_vdor == 1) // Agregar al Inventario
 		{
+			vector<Consola*> consoles; 
+			
 			int op_vdor_1 = 0;
 			while(op_vdor_1 != 3)
             		{
-                        	cout << "¿Que desea agregar?" << endl;
+                        	cout << "\n¿Que desea agregar?" << endl;
                                 cout << "1. Consola" << endl;
                                 cout << "2. Video Juego" << endl;
                                 cout << "3. Salir" << endl;
                                 cout << "Escoja una opcion: ";
                                 cin >> op_vdor_1;
-                                if(op_vdor_1 == 1)
+                                if(op_vdor_1 == 1) // Consola
                                 {
+  					cout << "\nAgregar Consola" << endl;
+					
+                                        // estado
+                                        bool estado;
+                                        int op_estado;
+                                        cout << "Estado" << endl;
+                                        cout << "1. Nuevo" << endl;
+                                        cout << "2. Usado" << endl;
+                                        cout << "Escoja un estado: ";
+                                       	cin >> op_estado;
+                                        if(op_estado == 1)
+                                        	estado = true;
+                                        else
+                                        	estado = false;
+					
+                                       	// numSerie
+                                        string numSerie = generarNumSerie();
+                                        // TODO: validar numSerie
+					
+                                        int op_consola;
+                                        cout << "\n¿Cual es la empresa de la Consola que desea agregar?" << endl;
+                                        cout << "1. Microsoft" << endl;
+                                        cout << "2. Sony" << endl;
+                                        cout << "3. Nintendo" << endl;
+                                        cout << "4. Salir" << endl;
+                                        cout << "Escoja una opcion: ";
+                                        cin >> op_consola;
+					
+					if(op_consola == 1) // Microsoft
+					{
+						Microsoft* M = new Microsoft();
+						
+                                        	M -> setEstado(estado);
+                                       		M -> setNumSerie(numSerie);
+						
+                                        	// modelo
+                                       		int op_modelo;
+                                        	cout << "\nMicrosoft - Modelo" << endl;
+                                        	cout << "1. Xbox" << endl;
+                                        	cout << "2. Xbox 360" << endl;
+                                        	cout << "3. Xbox One" << endl;
+                                        	cout << "Escoja un modelo: ";
+                                        	cin >> op_modelo;
+                                        	M -> setModelo(op_modelo);
+						
+                                        	// precio
+                                        	double precio;
+                                        	cout << "\nIngrese el precio en $: ";
+                                        	cin >> precio;
+                                        	M -> setPrecio(precio);
+						
+                                        	consoles.push_back(M);
+						
+                                        	ofstream archivo("Consolas.txt", std::ios_base::app);
+                                        	if(archivo.is_open())
+                                        	{
+                                        		for(int i = 0; i < consoles.size(); i++)
+                                      			{
+                                        			archivo << consoles[i] -> getModelo() << ' ';
+                                                		archivo << consoles[i] -> getYear() << ' ';
+                                                		archivo << consoles[i] -> getEstado() << ' ';
+                                                		archivo << consoles[i] -> getNumSerie() << ' ';
+                                              			archivo << consoles[i] -> getPrecio() << endl;
+                                                        }
+                                                        archivo.close();
+                                                        cout << "\nConsola Microsoft agregada correctamente" << endl;
+                                              	}
+                                                else
+                                                	cout << "No se pudo abrir el archivo." << endl;
+					}
+					else if(op_consola == 2) // Sony
+					{
+					}
+					else if(op_consola == 3) // Nintendo
+					{
+					}
+					else
+						cout << "Debe escoger una opcion valida." << endl;
                                 }
-                                else if(op_vdor_1 == 2)
+                                else if(op_vdor_1 == 2) // VideoJuego
                                 {
                                 }
                                 else if(op_vdor_1 == 3)
-                                	break;
+				{
+                                	// break;
+				}
                                 else
                                 	cout << "Debe escoger una opcion valida." << endl;
 			}
+			for(int i = 0; i < consoles.size(); i++)
+                        	delete consoles[i];
+                        consoles.clear();
 		}
 		else if(op_vdor == 2) // Vender
 		{
-			int op_vdor_2 = 0;
+			/* int op_vdor_2 = 0;
                         while(op_vdor_2 != 3)
                         {
                                 cout << "¿Que desea vender?" << endl;
@@ -396,10 +481,12 @@ int main()
                                 {
                                 }
                                 else if(op_vdor_2 == 3)
-                                        break;
+				{
+                                        // break;
+				}
                                 else
                                         cout << "Debe escoger una opcion valida." << endl;
-                        }
+                        } */
 		}
 		else if(op_vdor == 3)
 		{
@@ -410,14 +497,13 @@ int main()
                 	ss2 << now2 -> tm_hour << ':' << now2 -> tm_min << ':' << now2 -> tm_sec;
                 	horaSalida = ss2.str();
 			V -> setHoraSalida(horaSalida);
-			break;
+			// break;
 		}
 		else
 			cout << "Debe escogar una opcion valida." << endl;
-		
-		delete now2;
-		delete now1;
-		delete V; */
+		// delete now2;
+		// delete now1;
+		// delete V;
 	}
 	else
 		cout << "Debe escoger una opcion valida." << endl;
@@ -428,24 +514,9 @@ int main()
 	/* for(int i; i < videoGames.size(); i++)
 		delete videoGames[i];
 	videoGames.clear(); */
+	
 	delete I;
-	delete admin;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	// delete admin;
 	
 	/* time_t t = time(0);
 	struct tm* now = localtime(&t);
@@ -532,7 +603,6 @@ string generarNumSerie()
 	ss << s;
 	return ss.str();
 }
-
 	                                /* int op_admin_1 = 0;
                                         while(op_admin_1 != 3)
                                         {
@@ -551,19 +621,3 @@ string generarNumSerie()
                                                         break;
                                                 else
                                                         cout << "Debe escoger una opcion valida." << endl */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
