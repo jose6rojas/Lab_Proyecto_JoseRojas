@@ -7,7 +7,7 @@
 
 class Administrador : public Usuario
 {
-	private:
+	public:
 		string contrasena;
 	public:
 		Administrador();

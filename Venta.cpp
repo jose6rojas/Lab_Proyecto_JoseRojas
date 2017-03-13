@@ -5,11 +5,11 @@
 Venta::Venta()
 {
 }
-Venta::Venta(string nombreCliente, string horaFinalizacion, Usuario* comprador, double subtotal)
+Venta::Venta(string nombreCliente, string horaFinalizacion, Usuario* vendedor, double subtotal)
 {
 	this -> nombreCliente = nombreCliente;
 	this -> horaFinalizacion = horaFinalizacion;
-	this -> comprador = comprador;
+	this -> vendedor = vendedor;
 	this -> subtotal = subtotal;
 }
 
@@ -50,13 +50,13 @@ string Venta::getHoraFin()
 	return horaFinalizacion;
 }
 // comprador
-void Venta::setComprador(Usuario* comprador)
+void Venta::setVendedor(Usuario* comprador)
 {
-	this -> comprador = comprador;
+	this -> vendedor = vendedor;
 }
-Usuario* Venta::getComprador()
+Usuario* Venta::getVendedor()
 {
-	return comprador;
+	return vendedor;
 }
 // subtotal
 void Venta::setSubtotal(double subtotal)
@@ -70,7 +70,7 @@ double Venta::getSubtotal()
 
 Venta::~Venta()
 {
-	delete comprador;
+	delete vendedor;
 	for(int i; i < listaConsolas.size(); i++)
 	{
 		delete listaConsolas[i];

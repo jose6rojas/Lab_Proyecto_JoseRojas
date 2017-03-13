@@ -1,4 +1,4 @@
-// Consola.h
+	// Consola.h
 
 #include <string>
 
@@ -26,7 +26,7 @@ class Consola
 		void setYear(string);
 		string getYear();
 		// modelo
-		// void setModelo(string);
+		void setModelo(string);
 		string getModelo();
 		// estado
 		void setEstado(bool); // Le da las opciones al usuario en el main.

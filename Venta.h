@@ -18,11 +18,11 @@ class Venta
 		vector<Consola*> listaConsolas;
 		vector<VideoJuego*> listaVGs;
 		string horaFinalizacion;
-		Usuario* comprador;
+		Usuario* vendedor;
 		double subtotal;
 	public:
 		Venta();
-		Venta(string, string, Usuario*, double); // nombreCliente, horaFinalizacion, comprador, subtotal
+		Venta(string, string, Usuario*, double); // nombreCliente, horaFinalizacion, vendedor, subtotal
 		
 		// nombreCliente
 		void setNombreCliente(string);
@@ -37,8 +37,8 @@ class Venta
 		void setHoraFin(string);
 		string getHoraFin();
 		// comprador
-		void setComprador(Usuario*);
-		Usuario* getComprador();
+		void setVendedor(Usuario*);
+		Usuario* getVendedor();
 		// subtotal
 		void setSubtotal(double);
 		double getSubtotal();

@@ -93,7 +93,7 @@ void Inventario::leerConsolas()
 				consolas.push_back(N);
 			}
 		}
-		cout << "La informacion fue leida correctamente." << endl;
+		cout << "La informacion fue leida correctamente.\n" << endl;
 	}
 	else
 		cout << "No se pudo leer el archivo." << endl;
@@ -112,7 +112,7 @@ void Inventario::escribirConsolas()
 			archivo << consolas[i] -> getNumSerie() << ' ';
 			archivo << consolas[i] -> getPrecio() << endl;
 		}
-		cout << "La informacion fue escrita correctamente." << endl;
+		// cout << "La informacion fue escrita correctamente.\n" << endl;
 		archivo.close();
 	}
 	else
